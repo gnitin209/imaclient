@@ -1,0 +1,11 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+.btn:hover{
+  color: white;
+}
+.card-body{
+  align:center
+}
+.marg{
+  margin-left: 5%;
+}

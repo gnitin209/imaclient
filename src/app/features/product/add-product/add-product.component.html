@@ -1,0 +1,70 @@
+
+    <div *ngIf="name">
+        <div>
+            <div class="text-white">
+                <h5 class="card-header" style="background-color:#333;"><b>ADD PRODUCT</b></h5>
+            </div>
+            <div class="card-body">
+                <form  [formGroup]="registerForm"  (ngSubmit)="onSubmit()">
+                    <div class="form-row">
+                        <div class="form-group col-5 margin">
+                                <label><b>Name Of Product</b></label>
+                                <input type="text" placeholder=" Name" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                    <div *ngIf="f.name.errors.required">Name of Product Required</div>
+                                </div>
+                            </div>
+
+                        <div class="form-group col-5 adjust">
+                            <label><b>Name Of Vendor</b></label>
+                            <input type="text" placeholder="Vendor" formControlName="vendor" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.vendor.errors }"
+                            />
+                            <div *ngIf="submitted && f.vendor.errors" class="invalid-feedback">
+                                <div *ngIf="f.vendor.errors.required">Name of Product Required</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-5 margin">
+                            <label><b>Price</b></label>
+                            <input type="text" placeholder="Price" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }"
+                            />
+                            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                <div *ngIf="f.price.errors.required">Name of Product Required</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-5 adjust">
+                            <label><b>Quantity</b></label>
+                            <input type="text" placeholder="Quantity" formControlName="quantity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }"
+                            />
+                            <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+                                <div *ngIf="f.quantity.errors.required">Name of Product Required</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            
+                        <div class="form-group col-5 margin">
+                            <label><b>Batch Number</b></label>
+                            <input type="text" placeholder="Batch Name" formControlName="batchnumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.batchname.errors }"
+                            />
+                            <div *ngIf="submitted && f.batchname.errors" class="invalid-feedback">
+                                <div *ngIf="f.batchnumber.errors.required">Name of Product Required</div>
+                            </div>
+                        </div>
+                            <div class="form-group col-5 adjust">
+                                <label><b>Batch Date</b></label>
+                                <input type="text" placeholder="Date" formControlName="date" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.date.errors }"
+                                />
+                                <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                                    <div *ngIf="f.date.errors.required">Name of Product Required</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="text-center">
+                    <button class="btn btn-dark" style="margin-right:40px;">Add Furniture</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+
+    </div>

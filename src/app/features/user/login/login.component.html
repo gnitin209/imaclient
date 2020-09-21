@@ -1,0 +1,26 @@
+<div style="margin-top:80px;" class="container  bg-light w-100">
+    <div class="card card-signin my-5">
+    <div class="card-header" style="background-color:black">
+            <h2 style="color:azure">
+           Sign In
+        </h2>
+    </div>
+    <div class="card-body">
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="form-group">
+
+                        <input type="email" id="inputEmail" formControlName="userEmail" class="form-control" placeholder="User Email " ngModel required>
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="password" id="inputPassword" formControlName="userPassword" class="form-control" placeholder="Password" ngModel
+                            required>
+                    </div>
+                    <!-- <button class="btn btn-xs btn-primary btn-block text-uppercase" type="submit">SIGN IN</button> -->
+                    <button class="btn btn-primary"  style="background-color:black;color:white;width:200px;font-weight:500;"  type="submit">Submit</button>
+                </form>
+        </div>
+</div>
+</div>
+
